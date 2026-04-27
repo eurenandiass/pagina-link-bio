@@ -27,7 +27,9 @@
         .hero-bg {
             background-image: url('minha-foto.jpeg');
             background-size: cover;
-            background-position: center top;
+            /* bg-top garante que o rosto apareça primeiro na responsividade */
+            background-position: center top; 
+            background-repeat: no-repeat;
         }
         @keyframes shimmer {
             0% { transform: translateX(-100%); }
@@ -48,13 +50,13 @@
 </head>
 <body class="bg-dark-obsidian text-white font-sans antialiased">
 
-    <div class="relative w-full h-[55vh] md:h-[65vh] overflow-hidden flex flex-col justify-end">
+    <div class="relative w-full h-[65vh] md:h-[75vh] overflow-hidden flex flex-col justify-end">
         
-        <div class="absolute inset-0 hero-bg opacity-80 z-0"></div>
+        <div class="absolute inset-0 hero-bg opacity-100 z-0"></div>
         
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-obsidian via-dark-obsidian/40 to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-obsidian via-dark-obsidian/40 to-transparent/10 z-10"></div>
         
-        <div class="relative z-20 w-full text-center px-4 pb-8">
+        <div class="relative z-20 w-full text-center px-4 pb-12">
             <h1 class="text-4xl font-bold text-gold-primary tracking-[0.2em] uppercase mb-2">
                 Renan Dias
             </h1>
