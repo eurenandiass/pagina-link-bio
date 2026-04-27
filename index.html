@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Renan Dias | Consultoria Imobiliária</title>
+    <title>Renan Dias | Imóveis na Planta</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -16,12 +16,8 @@
                     },
                     colors: {
                         'gold-primary': '#D4AF37',
-                        'gold-light': '#F1D592',
                         'dark-obsidian': '#050505',
                         'dark-card': '#111111',
-                    },
-                    letterSpacing: {
-                        'ultra-wide': '.25em',
                     }
                 }
             }
@@ -30,9 +26,9 @@
     <style>
         .hero-bg {
             background-image: url('minha-foto.jpeg');
-            background-attachment: scroll;
+            background-size: cover;
+            background-position: center top;
         }
-        /* Efeito de brilho suave no botão de ouro */
         @keyframes shimmer {
             0% { transform: translateX(-100%); }
             100% { transform: translateX(100%); }
@@ -45,68 +41,64 @@
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 3s infinite;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 4s infinite;
         }
     </style>
 </head>
-<body class="bg-dark-obsidian text-white font-sans antialiased selection:bg-gold-primary selection:text-black">
+<body class="bg-dark-obsidian text-white font-sans antialiased">
 
-    <div class="relative w-full h-[45vh] md:h-[60vh] overflow-hidden flex items-end justify-center">
+    <div class="relative w-full h-[55vh] md:h-[65vh] overflow-hidden flex flex-col justify-end">
         
-        <div class="absolute inset-0 bg-cover bg-center md:bg-top opacity-60 hero-bg transform scale-105"></div>
+        <div class="absolute inset-0 hero-bg opacity-80 z-0"></div>
         
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-obsidian via-dark-obsidian/20 to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-obsidian via-dark-obsidian/40 to-transparent z-10"></div>
         
-        <div class="relative z-20 w-full text-center px-4 pb-12 animate-fade-in">
-            <h1 class="text-3xl md:text-5xl font-bold text-gold-primary tracking-ultra-wide uppercase mb-3 drop-shadow-2xl">
+        <div class="relative z-20 w-full text-center px-4 pb-8">
+            <h1 class="text-4xl font-bold text-gold-primary tracking-[0.2em] uppercase mb-2">
                 Renan Dias
             </h1>
-            <div class="flex items-center justify-center space-x-3 opacity-80">
-                <span class="h-[1px] w-8 bg-gold-primary"></span>
-                <p class="text-[10px] md:text-xs font-light uppercase tracking-[0.4em]">
-                    Lançamentos de Alto Padrão
-                </p>
-                <span class="h-[1px] w-8 bg-gold-primary"></span>
-            </div>
+            <p class="text-[10px] font-light uppercase tracking-[0.3em] text-white/90">
+                Especialista em Imóveis na Planta
+            </p>
             <p class="mt-2 text-[9px] text-gray-500 tracking-widest uppercase">CRECI 97.201</p>
         </div>
     </div>
 
-    <div class="max-w-md mx-auto px-8 py-6 space-y-6">
+    <div class="max-w-md mx-auto px-7 py-4 space-y-5">
         
         <a href="https://www.rivaincorporadora.com.br/imoveis?state=rio-de-janeiro&city=rio-de-janeiro" target="_blank" 
-           class="group flex flex-col items-center justify-center p-6 bg-dark-card border border-white/5 rounded-sm hover:border-gold-primary/40 transition-all duration-500 relative overflow-hidden">
-            <span class="text-gold-primary text-[10px] uppercase tracking-[0.3em] mb-1 group-hover:text-gold-light transition-colors">Portfólio</span>
-            <span class="font-semibold uppercase text-xs tracking-widest">Lançamentos no RJ</span>
+           class="group flex flex-col items-center justify-center p-5 bg-dark-card border border-white/5 rounded-2xl hover:border-gold-primary/30 transition-all duration-300">
+            <span class="text-gold-primary text-[9px] uppercase tracking-[0.3em] mb-1">Portfólio</span>
+            <span class="font-semibold uppercase text-xs tracking-widest text-center">Catálogo de Lançamentos RJ</span>
         </a>
 
         <a href="https://wa.me/5522988256252" target="_blank" 
-           class="group flex flex-col items-center justify-center p-6 bg-dark-card border border-white/5 rounded-sm hover:border-gold-primary/40 transition-all duration-500">
-            <span class="text-gold-primary text-[10px] uppercase tracking-[0.3em] mb-1 group-hover:text-gold-light transition-colors">Direct</span>
+           class="group flex flex-col items-center justify-center p-5 bg-dark-card border border-white/5 rounded-2xl hover:border-gold-primary/30 transition-all duration-300">
+            <span class="text-gold-primary text-[9px] uppercase tracking-[0.3em] mb-1">Direct</span>
             <span class="font-semibold uppercase text-xs tracking-widest text-center">Atendimento via WhatsApp</span>
         </a>
 
         <a href="#link-do-sistema-3" 
-           class="shimmer-effect flex items-center justify-center p-6 bg-gold-primary rounded-sm hover:bg-gold-light hover:scale-[1.01] transition-all duration-500 text-black shadow-2xl shadow-gold-primary/5">
+           class="shimmer-effect flex items-center justify-center p-5 bg-gold-primary rounded-2xl hover:scale-[1.02] transition-all duration-300 text-black shadow-lg shadow-gold-primary/10">
             <i class="fas fa-calculator mr-3 text-sm"></i>
-            <span class="font-bold uppercase text-[11px] tracking-[0.2em]">Simulador de Investimento</span>
+            <span class="font-bold uppercase text-[11px] tracking-[0.15em]">Simulador de Investimento</span>
         </a>
 
         <a href="https://wa.me/5522988256252" target="_blank" 
-           class="group flex flex-col items-center justify-center p-6 bg-dark-card border border-white/5 rounded-sm hover:border-gold-primary/40 transition-all duration-500">
-            <span class="text-gold-primary text-[10px] uppercase tracking-[0.3em] mb-1 group-hover:text-gold-light transition-colors">Estratégia</span>
+           class="group flex flex-col items-center justify-center p-5 bg-dark-card border border-white/5 rounded-2xl hover:border-gold-primary/30 transition-all duration-300">
+            <span class="text-gold-primary text-[9px] uppercase tracking-[0.3em] mb-1">Estratégia</span>
             <span class="font-semibold uppercase text-xs tracking-widest text-center">Consultoria: Sair do Aluguel</span>
         </a>
 
     </div>
 
-    <footer class="text-center pt-16 pb-12">
-        <div class="flex justify-center space-x-10 mb-8">
-            <a href="#" class="text-gray-600 hover:text-gold-primary transition-colors duration-300"><i class="fab fa-instagram text-lg"></i></a>
-            <a href="#" class="text-gray-600 hover:text-gold-primary transition-colors duration-300"><i class="fab fa-linkedin-in text-lg"></i></a>
+    <footer class="text-center pt-12 pb-10">
+        <div class="flex justify-center space-x-9 mb-6">
+            <a href="#" class="text-gray-600 hover:text-gold-primary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gold-primary transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
         </div>
-        <p class="text-[8px] uppercase tracking-[0.5em] text-gray-700">Rio de Janeiro &bull; Brasil &bull; Boutique Real Estate</p>
+        <p class="text-[8px] uppercase tracking-[0.4em] text-gray-700">Rio de Janeiro &bull; Brasil</p>
     </footer>
 
 </body>
