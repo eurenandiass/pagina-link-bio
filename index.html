@@ -11,9 +11,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
                     colors: {
                         'gold-primary': '#D4AF37',
                         'dark-obsidian': '#050505',
@@ -27,8 +25,8 @@
         .hero-bg {
             background-image: url('minha-foto.jpeg');
             background-size: cover;
-            /* bg-top garante que o rosto apareça primeiro na responsividade */
-            background-position: center top; 
+            /* Ajuste de 15% para tentar centralizar mais o rosto no topo */
+            background-position: center 15%; 
             background-repeat: no-repeat;
         }
         @keyframes shimmer {
@@ -50,14 +48,14 @@
 </head>
 <body class="bg-dark-obsidian text-white font-sans antialiased">
 
-    <div class="relative w-full h-[65vh] md:h-[75vh] overflow-hidden flex flex-col justify-end">
+    <div class="relative w-full h-[75vh] md:h-[85vh] overflow-hidden flex flex-col justify-end">
         
-        <div class="absolute inset-0 hero-bg opacity-100 z-0"></div>
+        <div class="absolute inset-0 hero-bg z-0"></div>
         
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-obsidian via-dark-obsidian/40 to-transparent/10 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-obsidian via-dark-obsidian/60 to-transparent z-10"></div>
         
-        <div class="relative z-20 w-full text-center px-4 pb-12">
-            <h1 class="text-4xl font-bold text-gold-primary tracking-[0.2em] uppercase mb-2">
+        <div class="relative z-20 w-full text-center px-4 pb-10">
+            <h1 class="text-4xl font-bold text-gold-primary tracking-[0.2em] uppercase mb-2 drop-shadow-lg">
                 Renan Dias
             </h1>
             <p class="text-[10px] font-light uppercase tracking-[0.3em] text-white/90">
@@ -67,7 +65,7 @@
         </div>
     </div>
 
-    <div class="max-w-md mx-auto px-7 py-4 space-y-5">
+    <div class="max-w-md mx-auto px-7 py-6 space-y-5">
         
         <a href="https://www.rivaincorporadora.com.br/imoveis?state=rio-de-janeiro&city=rio-de-janeiro" target="_blank" 
            class="group flex flex-col items-center justify-center p-5 bg-dark-card border border-white/5 rounded-2xl hover:border-gold-primary/30 transition-all duration-300">
